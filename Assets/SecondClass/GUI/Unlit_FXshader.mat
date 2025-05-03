@@ -7,9 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Custom_DissolveEffect
-  m_Shader: {fileID: 4800000, guid: b44988147f294094085b4e31760e2c71, type: 3}
-  m_ValidKeywords: []
+  m_Name: Unlit_FXshader
+  m_Shader: {fileID: 4800000, guid: c3a5e98ea4b808a46be11177366a30c3, type: 3}
+  m_ValidKeywords:
+  - _ENABLEFRESNEL_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,19 +21,23 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _DissolveMap:
+        m_Texture: {fileID: 2800000, guid: fa80a46cf72f9b84d99fbdbff6f081ff, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 47baccdb8d3655d4a8286193a56ac0d9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _NoiseTex:
-        m_Texture: {fileID: 2800000, guid: fa80a46cf72f9b84d99fbdbff6f081ff, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DissolveThreshold: 0.189
-    - _EdgeSoftness: 0.1
-    - _EdgeWidth: 0.1055
+    - _DissolveAmount: 0.075
+    - _DissolveWidth: 0.05
+    - _EnableDissolve: 0
+    - _EnableFresnel: 1
+    - _FresnelPower: 1.39
+    - _FresnelScale: 0.487
     m_Colors:
-    - _EdgeColor: {r: 0.8726415, g: 1, b: 0.98013675, a: 1}
+    - _DissolveColor: {r: 0.0047169924, g: 1, b: 0.7683249, a: 1}
+    - _FresnelColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
